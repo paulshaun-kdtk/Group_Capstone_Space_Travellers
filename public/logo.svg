@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40">
+  <!-- Letter S -->
+  <text x="10" y="30" font-family="Arial" font-size="30" fill="navy">S</text>
+  
+  <!-- Letter p -->
+  <text x="30" y="30" font-family="Arial" font-size="30" fill="navy">p</text>
+  
+  <!-- Letter a -->
+  <text x="40" y="30" font-family="Arial" font-size="30" fill="navy">a</text>
+  
+  <!-- Letter c -->
+  <text x="50" y="30" font-family="Arial" font-size="30" fill="navy">c</text>
+  
+  <!-- Letter e -->
+  <text x="60" y="30" font-family="Arial" font-size="30" fill="navy">e</text>
+ 
+  <!-- Letter X (in blue) -->
+  <text x="70" y="30" font-family="Arial" font-size="30" fill="lightblue">X</text>
+</svg>
