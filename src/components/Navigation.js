@@ -1,28 +1,27 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
+import LogoImage from './LogoImage';
 
-function Navigation() {
+const Navigation = () => {
+  const activeLink = {
+    textDecoration: 'underline',
+  };
   return (
     <nav>
+      <LogoImage />
+      <h1>Space Traveler&apos;s Hub</h1>
       <ul>
-        <li>
-          <NavLink to="/rockets" activeClassName="active-link">
-            Rockets
-          </NavLink>
+        <li className="link">
+          <NavLink to="/" style={({ isActive }) => (isActive ? activeLink : undefined)}>Rockets</NavLink>
         </li>
-        <li>
-          <NavLink to="/missions" activeClassName="active-link">
-            Missions
-          </NavLink>
+        <li className="link">
+          <NavLink to="/Missions" style={({ isActive }) => (isActive ? activeLink : undefined)}>Missions</NavLink>
         </li>
-        <li>
-          <NavLink to="/myprofile" activeClassName="active-link">
-            My Profile
-          </NavLink>
+        <li className="link">
+          <NavLink to="/MyProfile" style={({ isActive }) => (isActive ? activeLink : undefined)}>MyProfile</NavLink>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Navigation;
