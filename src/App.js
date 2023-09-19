@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Rockets from './components/Rockets';
-import Missions from './components/Missions';
+import Missions from './components/Redux/missions';
 import MyProfile from './components/MyProfile';
 import Navigation from './components/Navigation'; // Import the Navigation component
 
