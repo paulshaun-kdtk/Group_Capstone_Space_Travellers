@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 200 40" style="background-color: rgba(255,255,255,0.2)">
+  <!-- Letter S -->
+  <text x="10" y="30" font-family="Arial" font-size="20" fill="white">S</text>
+  
+  <!-- Letter P -->
+  <text x="30" y="30" font-family="Arial" font-size="20" fill="black">P</text>
+  
+  <!-- Letter A -->
+  <text x="50" y="30" font-family="Arial" font-size="20" fill="black">A</text>
+  
+  <!-- Letter C -->
+  <text x="70" y="30" font-family="Arial" font-size="20" fill="black">C</text>
+  
+  <!-- Letter E -->
+  <text x="90" y="30" font-family="Arial" font-size="20" fill="white">E</text>
+ 
+  <!-- Letter X (in Twitter blue) -->
+  <text x="110" y="30" font-family="Arial" font-size="20" fill="#1DA1F2">X</text>
+</svg>
