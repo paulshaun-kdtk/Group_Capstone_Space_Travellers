@@ -1,0 +1,27 @@
+.navContainer {
+  display: flex;
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.navItems {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  color: white;
+  width: 20%;
+}
+
+.Logo {
+  padding-inline-start: 2px;
+}
