@@ -1,11 +1,20 @@
-import './App.css';
-import Header from './components/navigation/Header';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Rockets from './components/Rockets';
+import Profile from './components/MyProfile';
+import Navigation from './components/Navigation';
+import Missions from './components/Mission';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      Space Travellers made by Faiz and Shaun
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/Missions" element={<Missions />} />
+        <Route path="/MyProfile" element={<Profile />} />
+        <Route path="/Rockets" element={<Rockets />} />
+
+      </Routes>
     </div>
   );
 }
