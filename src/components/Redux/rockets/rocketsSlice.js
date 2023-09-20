@@ -8,5 +8,6 @@ const rocketsSlice = createSlice({
   },
 });
 
-export const { /* Export your actions here */ } = rocketsSlice.actions;
+export const rocketActions = rocketsSlice.actions;
+
 export default rocketsSlice.reducer;
