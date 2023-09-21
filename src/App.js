@@ -1,22 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './Redux/store';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import Profile from './components/MyProfile';
-import store from './Redux/store';
 
 function App() {
   return (
     <div>
       <Provider store={store}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Rockets />} />
-            <Route path="/Missions" element={<Missions />} />
-            <Route path="/MyProfile" element={<Profile />} />
-          </Routes>
-        </Router>
+        <PersistGate loading={null} persistor={persistor}>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Rockets />} />
+              <Route path="/Missions" element={<Missions />} />
+              <Route path="/MyProfile" element={<Profile />} />
+            </Routes>
+          </Router>
+        </PersistGate>
       </Provider>
     </div>
   );
