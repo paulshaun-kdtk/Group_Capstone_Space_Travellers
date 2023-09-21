@@ -20,7 +20,7 @@ const Profile = () => {
   const reservedRockets = allRocketReservations.filter((rocket) => rocketReservations[rocket.id]);
 
   const reservedMissions = allMissionReservations.filter((mission) => missionReservations[mission.mission_id]);
-  
+
   return (
     <div>
       <Header />
