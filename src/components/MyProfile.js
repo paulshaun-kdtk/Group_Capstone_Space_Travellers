@@ -26,23 +26,31 @@ const Profile = () => {
       <div className="profile-outer">
         <div className="filtered-missions">
           <h2>My Missions</h2>
-          <div className="mission-names">
-            <ul className="each-mission-name">
+          {reservedMissions.length === 0 ? (
+            <div className="each-mission-name">
+              No current missions
+            </div>
+          ) : (
+            <div className="mission-names">
               {reservedMissions.map((mission) => (
-                <li key={mission.id}>{mission.mission_name}</li>
+                <div className="each-mission-name" key={mission.missionId}>{mission.missionName}</div>
               ))}
-            </ul>
-          </div>
+            </div>
+          )}
         </div>
         <div className="filtered-rockets">
           <h2>My Rockets</h2>
-          <div className="rocket-names">
-            <ul className="each-rocket-name">
+          {reservedRockets.length === 0 ? (
+            <div className="each-rocket-name">
+              No rockets reserved
+            </div>
+          ) : (
+            <div className="rocket-names">
               {reservedRockets.map((rocket) => (
-                <li key={rocket.id}>{rocket.name}</li>
+                <div className="each-rocket-name" key={rocket.id}>{rocket.name}</div>
               ))}
-            </ul>
-          </div>
+            </div>
+          )}
         </div>
 
       </div>

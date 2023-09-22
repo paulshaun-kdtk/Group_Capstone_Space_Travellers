@@ -19,13 +19,23 @@ const missionSlice = createSlice({
   reducers: {
     reserveMission: (state, action) => {
       const { missionId } = action.payload;
-      state.reservations[missionId] = true;
-      localStorage.setItem('missionReservations', JSON.stringify(state.reservations));
+      return {
+        ...state,
+        reservations: {
+          ...state.reservations,
+          [missionId]: true,
+        },
+      };
     },
     cancelMissionReservation: (state, action) => {
       const { missionId } = action.payload;
-      state.reservations[missionId] = false;
-      localStorage.setItem('missionReservations', JSON.stringify(state.reservations));
+      return {
+        ...state,
+        reservations: {
+          ...state.reservations,
+          [missionId]: false,
+        },
+      };
     },
   },
   extraReducers: (builder) => {
