@@ -25,24 +25,28 @@ function RocketList() {
   return (
     <div>
       <Header />
-      {rockets.map((rocket) => (
-        <div key={rocket.id}>
-          {rocket.flickr_images.length > 0 && (
+      <div className="rocket-list">
+        {rockets.map((rocket) => (
+          <div className="rocket-card" key={rocket.id}>
+            {rocket.flickr_images.length > 0 && (
             <img
               key={rocket.flickr_images[0]}
               src={rocket.flickr_images[0]}
               alt={`Rocket ${rocket.name} 0`}
             />
-          )}
-          <h2>{rocket.name}</h2>
-          <p>{rocket.description}</p>
-          {reservations[rocket.id] ? (
-            <button type="button" onClick={() => toggleReservation(rocket.id)}>Cancel Reservation</button>
-          ) : (
-            <button type="button" onClick={() => toggleReservation(rocket.id)}>Reserve Rocket</button>
-          )}
-        </div>
-      ))}
+            )}
+            <div className="rocket-details">
+              <h3>{rocket.name}</h3>
+              <p>{rocket.description}</p>
+              {reservations[rocket.id] ? (
+                <button type="button" className="reserve-button clicked" onClick={() => toggleReservation(rocket.id)}>Cancel Reservation</button>
+              ) : (
+                <button type="button" className="reserve-button" onClick={() => toggleReservation(rocket.id)}>Reserve Rocket</button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
