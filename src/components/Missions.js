@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  fetchMissions, selectAllMissions, selectMissionReservations, reserveMission, cancelMissionReservation,
+  fetchMissions,
+  selectAllMissions,
+  selectMissionReservations,
+  reserveMission,
+  cancelMissionReservation,
 } from '../Redux/missions/missionsSLice';
 import Header from './navigation/Header';
 
@@ -32,6 +36,7 @@ function Missions() {
               <th className="mission-column">Mission</th>
               <th className="mission-column">Description</th>
               <th className="mission-column">Status</th>
+              <th className="mission-column">Action</th>
             </tr>
           </thead>
           <tbody className="missions-body">
@@ -40,17 +45,18 @@ function Missions() {
                 <td>{mission.mission_name}</td>
                 <td>{mission.description}</td>
                 <td>
-                  {missionReservations[mission.mission_id] ? (
-                    <div>
-                      <span className="active-member">Active Member</span>
-                      <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave Mission</button>
-                    </div>
-                  ) : (
-                    <div>
-                      <span className="not-a-member">Not A Member</span>
-                      <button type="button" className="join-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Join Mission</button>
-                    </div>
-                  )}
+                  <span className={missionReservations[mission.mission_id] ? 'active-member' : 'not-a-member'}>
+                    {missionReservations[mission.mission_id] ? 'Active Member' : 'NOT A MEMBER'}
+                  </span>
+                </td>
+                <td>
+                  <button
+                    className={missionReservations[mission.mission_id] ? 'leave-mission' : 'join-mission'}
+                    type="button"
+                    onClick={() => toggleMissionReservation(mission.mission_id)}
+                  >
+                    {missionReservations[mission.mission_id] ? 'Leave Mission' : 'Join Mission'}
+                  </button>
                 </td>
               </tr>
             ))}
@@ -60,4 +66,5 @@ function Missions() {
     </div>
   );
 }
+
 export default Missions;

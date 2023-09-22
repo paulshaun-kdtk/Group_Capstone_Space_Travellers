@@ -33,7 +33,7 @@ const Profile = () => {
           ) : (
             <div className="mission-names">
               {reservedMissions.map((mission) => (
-                <div className="each-mission-name" key={mission.missionId}>{mission.missionName}</div>
+                <div className="each-mission-name" key={mission.id}>{mission.mission_name}</div>
               ))}
             </div>
           )}
