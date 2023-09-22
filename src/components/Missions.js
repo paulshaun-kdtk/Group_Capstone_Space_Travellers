@@ -39,17 +39,19 @@ function Missions() {
               <tr className="each-mission" key={mission.mission_id}>
                 <td>{mission.mission_name}</td>
                 <td>{mission.description}</td>
-                {missionReservations[mission.mission_id] ? (
-                  <td>
-                    <span className="active-member">Active Member</span>
-                    <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
-                  </td>
-                ) : (
-                  <td>
-                    <span className="not-a-member">Not A Member</span>
-                    <button type="button" className="join-misssion" onClick={() => toggleMissionReservation(mission.mission_id)}>Join This Mission</button>
-                  </td>
-                )}
+                <td>
+                  {missionReservations[mission.mission_id] ? (
+                    <div>
+                      <span className="active-member">Active Member</span>
+                      <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
+                    </div>
+                  ) : (
+                    <div>
+                      <span className="not-a-member">Not A Member</span>
+                      <button type="button" className="join-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Join This Mission</button>
+                    </div>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
