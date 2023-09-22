@@ -42,7 +42,7 @@ function Missions() {
                 {missionReservations[mission.mission_id] ? (
                   <td>
                     <span className="active-member">Active Member</span>
-                    <button type="button" classname="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
+                    <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
                   </td>
                 ) : (
                   <td>
