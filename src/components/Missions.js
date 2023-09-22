@@ -43,12 +43,12 @@ function Missions() {
                   {missionReservations[mission.mission_id] ? (
                     <div>
                       <span className="active-member">Active Member</span>
-                      <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
+                      <button type="button" className="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave Mission</button>
                     </div>
                   ) : (
                     <div>
                       <span className="not-a-member">Not A Member</span>
-                      <button type="button" className="join-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Join This Mission</button>
+                      <button type="button" className="join-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Join Mission</button>
                     </div>
                   )}
                 </td>
@@ -60,5 +60,4 @@ function Missions() {
     </div>
   );
 }
-
 export default Missions;

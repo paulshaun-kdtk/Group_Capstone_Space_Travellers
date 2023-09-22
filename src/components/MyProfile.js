@@ -26,24 +26,25 @@ const Profile = () => {
       <div className="profile-outer">
         <div className="filtered-missions">
           <h2>My Missions</h2>
-          <div className="each-mission-name">
-            <div className="each-mission-name">
+          <div className="mission-names">
+            <ul className="each-mission-name">
               {reservedMissions.map((mission) => (
                 <li key={mission.id}>{mission.mission_name}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
         <div className="filtered-rockets">
           <h2>My Rockets</h2>
           <div className="rocket-names">
-            <div className="each-rocket-name">
+            <ul className="each-rocket-name">
               {reservedRockets.map((rocket) => (
                 <li key={rocket.id}>{rocket.name}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
+
       </div>
     </div>
   );
