@@ -25,23 +25,36 @@ function Missions() {
   return (
     <div>
       <Header />
-      {missions.map((mission) => (
-        <div key={mission.mission_id}>
-          <h2>{mission.mission_name}</h2>
-          <p>{mission.description}</p>
-          {missionReservations[mission.mission_id] ? (
-            <div>
-              <span>Active Member</span>
-              <button type="button" onClick={() => toggleMissionReservation(mission.mission_id)}>Cancel Reservation</button>
-            </div>
-          ) : (
-            <div>
-              <span>Not A Member</span>
-              <button type="button" onClick={() => toggleMissionReservation(mission.mission_id)}>Make A Reservation</button>
-            </div>
-          )}
-        </div>
-      ))}
+      <div className="mission-outer">
+        <table className="mission-table">
+          <thead className="missions-heading">
+            <tr className="column-names">
+              <th className="mission-column">Mission</th>
+              <th className="mission-column">Description</th>
+              <th className="mission-column">Status</th>
+            </tr>
+          </thead>
+          <tbody className="missions-body">
+            {missions.map((mission) => (
+              <tr className="each-mission" key={mission.mission_id}>
+                <td>{mission.mission_name}</td>
+                <td>{mission.description}</td>
+                {missionReservations[mission.mission_id] ? (
+                  <td>
+                    <span className="active-member">Active Member</span>
+                    <button type="button" classname="leave-mission" onClick={() => toggleMissionReservation(mission.mission_id)}>Leave This Mission</button>
+                  </td>
+                ) : (
+                  <td>
+                    <span className="not-a-member">Not A Member</span>
+                    <button type="button" className="join-misssion" onClick={() => toggleMissionReservation(mission.mission_id)}>Join This Mission</button>
+                  </td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
