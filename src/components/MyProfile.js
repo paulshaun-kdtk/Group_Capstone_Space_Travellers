@@ -16,7 +16,6 @@ const Profile = () => {
   const allRocketReservations = useSelector(selectAllRocketReservations);
   const allMissionReservations = useSelector(selectAllMissionReservations);
 
-  // Combine and filter the rockets and missions based on reservation status
   const reservedRockets = allRocketReservations.filter((rocket) => rocketReservations[rocket.id]);
 
   const reservedMissions = allMissionReservations.filter((mission) => missionReservations[mission.mission_id]);
@@ -24,19 +23,24 @@ const Profile = () => {
   return (
     <div>
       <Header />
-      <h2>Reserved Rockets:</h2>
-      <ul>
-        {reservedRockets.map((rocket) => (
-          <li key={rocket.id}>{rocket.name}</li>
-        ))}
-      </ul>
-
-      <h2>Reserved Missions:</h2>
-      <ul>
-        {reservedMissions.map((mission) => (
+      <div className="profile-outer">
+        <div className="filtered-missions">
+          <h2>My Missions</h2>
+          <div classname="each-mission-name">
+          <div className="each-mission-name">{reservedMissions.map((mission) => (
           <li key={mission.id}>{mission.mission_name}</li>
-        ))}
-      </ul>
+        ))}</div>
+          </div>
+        </div>
+        <div className="filtered-rockets">
+          <h2>My Rockets</h2>
+          <div classname="rocket-names">
+          <div className="each-rocket-name">{reservedRockets.map((rocket) => (
+          <li key={rocket.id}>{rocket.name}</li>
+        ))}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
