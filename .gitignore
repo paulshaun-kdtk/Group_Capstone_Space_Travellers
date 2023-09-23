@@ -23,3 +23,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 copy_github_board.sh
+.eslintignore
+Test/
