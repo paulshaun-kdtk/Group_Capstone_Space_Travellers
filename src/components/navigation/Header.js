@@ -1,20 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import { NavLink } from 'react-router-dom';
+import LogoImage from '../LogoImage';
 import './Header.css';
 
-function Header() {
+const Header = () => {
+  const activeLink = {
+    textDecoration: 'underline',
+  };
   return (
-    <div className="navContainer">
-      <nav className="navItems">
-        <img className="Logo" src={logo} alt="Space Travellers" />
-        <ul className="navList">
-          <li>Rockets</li>
-          <li>Missions</li>
-          <li>Profile</li>
-        </ul>
-      </nav>
-    </div>
+    <nav className="Nav-container">
+      <div className="logo-icon">
+        <LogoImage />
+        <p>Space Travelers&apos; Hub</p>
+      </div>
+      <ul className="navigation-links">
+        <li className="link">
+          <NavLink to="/" style={({ isActive }) => (isActive ? activeLink : undefined)}>Rockets</NavLink>
+        </li>
+        <li className="link">
+          <NavLink to="/Missions" style={({ isActive }) => (isActive ? activeLink : undefined)}>Missions</NavLink>
+        </li>
+        <span>|</span>
+        <li className="link">
+          <NavLink to="/MyProfile" style={({ isActive }) => (isActive ? activeLink : undefined)}>MyProfile</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
-}
+};
 
 export default Header;
