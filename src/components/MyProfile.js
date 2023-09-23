@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import {
   selectAllRockets as selectAllRocketReservations,
   selectReservations as selectRocketReservations,
-} from '../Redux/rockets/rocketsSlice';
+} from '../redux/rockets/rocketsSlice';
 import {
   selectAllMissions as selectAllMissionReservations,
   selectMissionReservations,
-} from '../Redux/missions/missionsSLice';
+} from '../redux/missions/missionsSlice';
 import Header from './navigation/Header';
 
 const Profile = () => {

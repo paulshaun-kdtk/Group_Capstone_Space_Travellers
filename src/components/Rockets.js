@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchRockets, selectAllRockets, selectReservations, reserveRocket, cancelReservation,
-} from '../Redux/rockets/rocketsSlice';
+} from '../redux/rockets/rocketsSlice';
 import Header from './navigation/Header';
 
 function RocketList() {

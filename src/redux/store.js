@@ -1,12 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import {
-  persistReducer, persistStore,
-  FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER,
+  persistReducer, persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER,
 } from 'redux-persist';
-import missionsSLice from './missions/missionsSLice';
-import rocketsSlice from './rockets/rocketsSlice';
-
+import rocketSlice from './rockets/rocketsSlice';
+import missionSlice from './missions/missionsSlice';
 // import reservedSlice from './profile/profileSlice';
 
 const persistConfig = {
@@ -15,8 +13,8 @@ const persistConfig = {
 };
 
 const rootReducer = {
-  rockets: rocketsSlice,
-  missions: missionsSLice,
+  rockets: rocketSlice,
+  missions: missionSlice,
   //  reservations: reservedSlice,
 };
 

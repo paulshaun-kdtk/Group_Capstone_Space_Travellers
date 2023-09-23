@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from './Redux/store';
+import { store, persistor } from './redux/store';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import Profile from './components/MyProfile';
