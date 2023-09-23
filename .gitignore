@@ -18,7 +18,6 @@
 .env.test.local
 .env.production.local
 copy_github_board.sh
-.eslintignore
 
 npm-debug.log*
 yarn-debug.log*
