@@ -6,6 +6,7 @@ import { store, persistor } from './redux/store';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import Profile from './components/MyProfile';
+import './App.css';
 
 function App() {
   return (
