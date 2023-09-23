@@ -6,7 +6,7 @@ import {
   selectMissionReservations,
   reserveMission,
   cancelMissionReservation,
-} from '../Redux/missions/missionsSLice';
+} from '../redux/missions/missionsSlice';
 import Header from './navigation/Header';
 
 function Missions() {
