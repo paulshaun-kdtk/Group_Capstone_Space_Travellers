@@ -21,7 +21,8 @@
     "import/extensions": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "import/no-extraneous-dependencies": "off"
 
   },
   "overrides": [

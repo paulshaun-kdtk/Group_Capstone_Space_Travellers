@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-
-//state
+// state
 const initialState = {
   missions: [],
   status: 'idle',
